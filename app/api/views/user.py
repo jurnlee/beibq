@@ -1,4 +1,4 @@
-#coding: utf-8
+# coding: utf-8
 import base64
 from flask import current_app
 from app.models.user import *

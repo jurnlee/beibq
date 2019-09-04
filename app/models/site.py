@@ -1,7 +1,6 @@
-#coding: utf-8
+# coding: utf-8
 from app.models.model import *
 from sqlalchemy.dialects.mysql import LONGTEXT
-
 
 PREFIX = "site_"
 
@@ -13,9 +12,9 @@ class SiteMeta(db.Model):
         "mysql_engine": "InnoDB",
         "mysql_charset": "utf8"
     }
-    id = db.Column(db.Integer, primary_key = True, nullable = False)
-    name = db.Column(db.String(255), nullable = False, index = True)
-    value = db.deferred(db.Column(LONGTEXT, default="", nullable = False))
+    id = db.Column(db.Integer, primary_key=True, nullable=False)
+    name = db.Column(db.String(255), nullable=False, index=True)
+    value = db.deferred(db.Column(LONGTEXT, default="", nullable=False))
 
     @staticmethod
     def add(data):
@@ -41,5 +40,3 @@ class SiteMeta(db.Model):
     @staticmethod
     def all():
         return SiteMeta.query.all()
-
-
