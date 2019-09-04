@@ -7,3 +7,4 @@ config.py
 app/static/node_modules/
 app/static/resource/
 .DS_Store
+venv
